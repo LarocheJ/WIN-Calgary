@@ -1,5 +1,5 @@
 <h1>WIN Calgary</h1>
-<p>Project created for a not for profit church.</p>
+<p>Custom WordPress theme developed for a nonprofit church.</p>
 <h2>Stack</h2>
 <ul>
     <li>HTML</li>
