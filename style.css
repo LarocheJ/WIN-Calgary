@@ -1,0 +1,602 @@
+/* 
+Theme Name: WIN Calgary
+Author: Jimmy Laroche
+Author URI: https://jimmylaroche.com
+Description: WIN Calgary custom theme developed from scratch by the New Media Production & Design group - Jimmy, Clarissa, Spring and Zachary.
+Version: 1.0
+*/
+
+:root {
+  --font: "Roboto", sans-serif;
+  --primary-colour: #0f4673;
+  --primary-hover: #155385;
+  --secondary-colour: #199bd7;
+  --black: #383838;
+  --grey: #CECECE;
+  --white: #f3f3f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wp-admin {
+  font-family: var(--font);
+}
+
+body {
+  font-family: var(--font);
+  background: #ebebeb;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===TEXT STYLES=== */
+h1 {
+  color: #0f4673;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  display: none;
+}
+
+p {
+  line-height: 1.8;
+}
+
+p,
+a,
+ul,
+li {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: .08rem;
+}
+
+.container h2,
+.container h3 {
+  margin-bottom: 0;
+}
+
+.container h2 {
+  font-size: 48px;
+  margin-top: 0;
+}
+
+.container h3 {
+  font-size: 32px;
+}
+
+.container h1,
+.container h2,
+.container h3,
+.container h4,
+.container h5,
+.container h6 {
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+/* === GENERAL STYLES === */
+
+.container {
+  width: 1400px;
+  max-width: 90%;
+  margin: 2rem auto;
+}
+
+.wp-block-button__link {
+  padding: 1rem 2.5rem !important;
+  border: 2px solid var(--primary-colour) !important;
+  color: var(--white) !important;
+  background: var(--primary-colour) !important;
+  text-transform: uppercase;
+  margin-top: 2rem !important;
+  transition: 0.2s ease all !important;
+  border-radius: 0 !important;
+}
+
+.wp-block-button__link:hover {
+  background: var(--primary-hover) !important;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.spacer-2 {
+  height: 100px;
+  width: 100%;
+}
+
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 0;
+  align-items: center;
+  grid-gap: 1rem;
+}
+
+.grid-2-col div:nth-of-type(2) {
+  height: 100%;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-center-block {
+  display: block;
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.container a {
+  color: var(--secondary-colour);
+  transition: .2s ease all;
+}
+
+.container a:hover {
+  color: var(--primary-hover);
+}
+
+blockquote {
+  background: #111;
+  color: var(--white);
+  padding: 2rem !important;
+}
+
+.full-width-bg {
+  margin-top: 0;
+  width: 100%;
+  background: var(--grey);
+  padding: 1rem 0;
+}
+
+.full-width-bg p {
+  margin-top: 0;
+}
+
+.full-height {
+  min-height: 90vh;
+  padding: 5%;
+}
+
+.jumbo-heading {
+  font-size: 10vw !important;
+}
+
+.grey-text {
+  color: rgb(94, 94, 94);
+}
+
+.back-to-top-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  transition: .2s ease all;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.small-seperator {
+  width: 300px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+::selection {
+  background: var(--primary-hover);
+  color: var(--white);
+}
+
+/* === MENU === */
+
+.top-fixed {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  transition: .3s ease all;
+  background: var(--white);
+  box-shadow: 0px 10px 20px 0px rgba(90, 90, 90, 0.3);
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(90, 90, 90, 0.3);
+  -moz-box-shadow: 0px 10px 20px 0px rgba(90, 90, 90, 0.3);
+  clear: both;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1400px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  transition: .2s ease all;
+}
+
+header {
+  padding-top: 6.1rem;
+}
+
+.custom-logo-link {
+  max-width: 90px;
+  max-height: 90px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.custom-logo {
+  max-width: 90px;
+  max-height: 90px;
+  transition: .3s ease all;
+}
+
+.give a {
+  background: var(--primary-colour) !important;
+  padding: 0 1rem !important;
+  color: #fcfcfc !important;
+}
+
+.give a:hover {
+  background: var(--primary-hover) !important;
+}
+
+/* Remove the right margin from the "Give" button in the nav */
+.mega-menu-item-86 {
+  margin-right: 0 !important;
+}
+
+.live {
+  margin-left: 2rem !important;
+}
+
+.live a {
+  color: var(--white) !important;
+  background: #ed4747 !important;
+  padding: 0 1rem !important;
+  transition: 0.3s ease all !important;
+}
+
+.live a:hover {
+  background: rgb(233, 59, 59) !important;
+}
+
+#menu-main-menu a {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
+  color: var(--black);
+}
+
+.mega-menu-wrap a {
+  transition: 0.2s ease all !important;
+}
+
+#main-menu ul {
+  list-style: none;
+}
+
+#mega-menu-wrap-main-menu #mega-menu-main-menu>li.mega-menu-item>a.mega-menu-link {
+  height: inherit !important;
+}
+
+/* === PAGE HEADERS === */
+
+.header-banner {
+  /* width: 100%; */
+  height: 340px;
+  transition: .2s ease all;
+}
+
+/* Change header backgrounds here */
+
+/* Small Group */
+.small-group {
+  background: url("assets/img/small-group-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Meet our Team */
+.team {
+  background: url("assets/img/about-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Values & Beliefs */
+.values-beliefs {
+  background: url("assets/img/values-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Young People */
+.young-people {
+  background: url("assets/img/young-people-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Kids */
+.kids {
+  background: url("assets/img/kids-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Prayer & Music */
+.prayer-music {
+  background: url("assets/img/prayer-music-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* === FOOTER === */
+
+footer {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #333;
+  color: var(--white);
+}
+
+footer a {
+  color: var(--white) !important;
+  text-transform: uppercase;
+  transition: .2s ease all;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--secondary-colour) !important;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+footer .fa-facebook,
+footer .fa-instagram,
+footer .fa-youtube-play {
+  font-size: 30px;
+  margin: 1rem;
+}
+
+footer .copyright {
+  width: 100%;
+  text-align: center;
+  background: #222;
+  padding: 2rem 0;
+  font-size: 14px;
+  margin: 0;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+
+footer ul li {
+  margin-left: 0;
+}
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  width: 33%;
+}
+
+.footer-left hr,
+.footer-middle hr {
+  display: none;
+  width: 40%;
+  color: #b4b4b4;
+  margin: 1rem auto 2rem auto;
+}
+
+.footer-middle img {
+  width: 300px;
+  max-width: 100%;
+  margin: 1rem 0 3rem 0;
+}
+
+footer h3 {
+  color: var(--white) !important;
+  margin-top: 0;
+  font-size: 26px !important;
+  font-style: normal !important;
+}
+
+#footer-menu {
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+}
+
+footer .container {
+  margin-top: 0 !important;
+}
+
+.menu-footer-menu-container {
+  padding: 0;
+  margin: 0;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+.footer-block:nth-of-type(2),
+.footer-block:nth-of-type(3) {
+  margin-top: 1rem;
+}
+
+/* === MEDIA QUERIES === */
+
+@media all and (max-width: 1200px) {
+  .header-banner {
+    height: 320px;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .live {
+    margin-left: 1rem !important;
+  }
+
+  .header-banner {
+    height: 300px;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  nav {
+    padding: 0;
+  }
+
+  .custom-logo {
+    width: 80% !important;
+    height: 80% !important;
+  }
+
+  .live {
+    margin: 0 !important;
+  }
+
+  .live a {
+    background: inherit !important;
+    border-radius: none !important;
+    padding: 0 0.5rem !important;
+  }
+
+  #mega-menu-wrap-main-menu #mega-menu-main-menu li.mega-menu-item.mega-icon-right>a.mega-menu-link:before {
+    display: none;
+  }
+
+  .live a:hover {
+    background: inherit !important;
+  }
+
+  .give a {
+    padding: 0 0.5rem !important;
+  }
+
+  .header-banner {
+    height: 280px;
+  }
+}
+
+
+@media all and (max-width: 780px) {
+  #mega-menu-wrap-main-menu .mega-menu-toggle .mega-toggle-block-1 {
+    width: 150px !important;
+    margin: 0;
+  }
+
+  #menu-footer-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #menu-footer-menu li a {
+    padding: 0 1rem;
+  }
+
+  #menu-footer-menu li::after {
+    content: "|";
+  }
+
+  #menu-footer-menu li:last-child::after {
+    content: "";
+  }
+
+  footer nav {
+    max-width: 100% !important;
+  }
+
+  .grid-2-col {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-2-col div:nth-of-type(2) {
+    height: 500px;
+  }
+
+  .header-banner {
+    height: 250px;
+  }
+
+  .container h2 {
+    font-size: 40px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+  }
+
+  .footer-left hr,
+  .footer-middle hr {
+    display: block;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header-banner {
+    height: 220px;
+  }
+}
